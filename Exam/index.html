@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Copilot GH-300 Exam Study Materials</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .study-materials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .study-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .study-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .card-header h2 {
+            font-size: 1.5em;
+            margin-bottom: 8px;
+        }
+
+        .card-header .icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .card-body {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-description {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        .card-features {
+            list-style: none;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .card-features li {
+            padding: 5px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .card-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-weight: bold;
+        }
+
+        .card-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: auto;
+        }
+
+        .card-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.95em;
+        }
+
+        .quick-stats {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 30px;
+            color: white;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            padding: 15px;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 GitHub Copilot GH-300 Exam</h1>
+            <p>Complete Study Materials & Practice Tests for GitHub Copilot Certification</p>
+        </header>
+
+        <div class="quick-stats">
+            <div style="margin-bottom: 15px;">
+                <h3>Exam Preparation Resources</h3>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">700+</div>
+                    <div class="stat-label">Questions</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label">Domains</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Study Guides</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="study-materials">
+            <!-- Full Index -->
+            <a href="Full_Index.htm" class="study-card">
+                <div class="card-header">
+                    <div class="icon">📑</div>
+                    <h2>Full Index</h2>
+                    <p style="font-size: 0.9em; opacity: 0.9;">Complete Reference</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">
+                        Complete indexed reference of all questions and topics with searchable content.
+                    </p>
+                    <ul class="card-features">
+                        <li>Full question index</li>
+                        <li>Topic reference</li>
+                        <li>Searchable content</li>
+                        <li>Answer key</li>
+                        <li>Cross-references</li>
+                    </ul>
+                    <span class="card-link">Browse Index →</span>
+                </div>
+            </a>
+            
+            <!-- Study Guide Final -->
+            <a href="GC-300.html" class="study-card">
+                <div class="card-header">
+                    <div class="icon">📚</div>
+                    <h2>Study Guide</h2>
+                    <p style="font-size: 0.9em; opacity: 0.9;">Final Edition</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">
+                        Comprehensive study guide organized by GH-300 domains with detailed explanations and references.
+                    </p>
+                    <ul class="card-features">
+                        <li>Domain-based organization</li>
+                        <li>Detailed explanations</li>
+                        <li>Reference links</li>
+                        <li>Progress tracking</li>
+                        <li>Interactive interface</li>
+                    </ul>
+                    <span class="card-link">Start Studying →</span>
+                </div>
+            </a>
+
+            <!-- More Questions Study Guide -->
+            <a href="More_Questions_Study_Guide.html" class="study-card">
+                <div class="card-header">
+                    <div class="icon">❓</div>
+                    <h2>Additional Questions</h2>
+                    <p style="font-size: 0.9em; opacity: 0.9;">Extended Set</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">
+                        400+ additional practice questions with multi-answer support and advanced answer locking.
+                    </p>
+                    <ul class="card-features">
+                        <li>400+ questions</li>
+                        <li>Multi-answer support</li>
+                        <li>Answer locking</li>
+                        <li>Answer badges</li>
+                        <li>Category filtering</li>
+                    </ul>
+                    <span class="card-link">Practice Now →</span>
+                </div>
+            </a>
+
+            <!-- GC-300 Quiz -->
+            <a href="GH300_Study_Guide_Final.html" class="study-card">
+                <div class="card-header">
+                    <div class="icon">🧪</div>
+                    <h2>GC-300 Quiz</h2>
+                    <p style="font-size: 0.9em; opacity: 0.9;">Quick Assessment</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">
+                        Quick quiz format for rapid assessment and knowledge verification across all domains.
+                    </p>
+                    <ul class="card-features">
+                        <li>Quick format</li>
+                        <li>Rapid assessment</li>
+                        <li>Score tracking</li>
+                        <li>Instant feedback</li>
+                        <li>Timed mode</li>
+                    </ul>
+                    <span class="card-link">Take Quiz →</span>
+                </div>
+            </a>
+
+            
+        </div>
+
+        <div class="footer">
+            <h3>How to Use These Materials</h3>
+            <p style="margin-top: 15px; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.8;">
+                Start with the <strong>Study Guide</strong> to learn core concepts and understand the 7 domains. 
+                Practice with <strong>Additional Questions</strong> to reinforce learning. 
+                Use the <strong>GC-300 Quiz</strong> for quick assessments. 
+                Reference the <strong>Full Index</strong> to find specific topics quickly.
+            </p>
+            <p style="margin-top: 20px; opacity: 0.8;">
+                © 2024 GitHub Copilot GH-300 Exam Preparation | All rights reserved
+            </p>
+        </div>
+    </div>
+</body>
+</html>

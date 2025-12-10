@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Copilot Learning Path - Complete Index</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            border-radius: 12px;
+        }
+        
+        header {
+            text-align: center;
+            border-bottom: 4px solid #24292e;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+            background: linear-gradient(135deg, #24292e 0%, #4a5568 100%);
+            color: white;
+            padding: 40px;
+            margin: -40px -40px 40px -40px;
+            border-radius: 12px 12px 0 0;
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        .learning-path-info {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .learning-path-info h2 {
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        
+        .learning-path-info p {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .progress-tracker {
+            background-color: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+        
+        .progress-tracker h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .stage {
+            margin-bottom: 50px;
+            border-left: 5px solid #e0e0e0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .stage::before {
+            content: attr(data-stage);
+            position: absolute;
+            left: -45px;
+            top: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.3em;
+            box-shadow: 0 4px 10px rgba(102, 126, 234, 0.4);
+        }
+        
+        .stage-title {
+            color: #24292e;
+            font-size: 2em;
+            margin-bottom: 15px;
+            margin-top: 5px;
+        }
+        
+        .stage-description {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+            background-color: #f9fafb;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        .section:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+        
+        .section-title {
+            color: #667eea;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title::before {
+            content: "📚";
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        
+        .topic-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .topic-item {
+            margin-bottom: 12px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .topic-item::before {
+            content: "▸";
+            position: absolute;
+            left: 8px;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .topic-link {
+            color: #24292e;
+            text-decoration: none;
+            font-size: 1.05em;
+            transition: all 0.2s ease;
+            display: inline-block;
+            padding: 5px 0;
+        }
+        
+        .topic-link:hover {
+            color: #667eea;
+            padding-left: 10px;
+        }
+        
+        .topic-link::after {
+            content: " →";
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+        
+        .topic-link:hover::after {
+            opacity: 1;
+        }
+        
+        .subtopic-list {
+            list-style: none;
+            padding-left: 25px;
+            margin-top: 10px;
+        }
+        
+        .subtopic-item {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+            font-size: 0.95em;
+        }
+        
+        .subtopic-item::before {
+            content: "•";
+            position: absolute;
+            left: 5px;
+            color: #764ba2;
+        }
+        
+        .key-concepts {
+            background-color: #fff4e6;
+            border-left: 4px solid #ff9800;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .key-concepts h4 {
+            color: #ff9800;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .nav-box {
+            background: linear-gradient(135deg, #24292e 0%, #4a5568 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .nav-box h3 {
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .nav-link {
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .nav-link:hover {
+            background-color: rgba(255,255,255,0.2);
+            transform: scale(1.05);
+        }
+        
+        footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #e5e7eb;
+            text-align: center;
+            color: #666;
+        }
+        
+        .footer-links {
+            margin-top: 20px;
+        }
+        
+        .footer-links a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+            
+            .nav-box {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .stage::before {
+                left: -35px;
+                width: 50px;
+                height: 50px;
+                font-size: 1em;
+            }
+            
+            .stage {
+                padding-left: 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 GitHub Copilot Learning Path</h1>
+            <p class="subtitle">A Complete Step-by-Step Guide to Mastering GitHub Copilot</p>
+        </header>
+        
+        <div class="learning-path-info">
+            <h2>📖 About This Learning Path</h2>
+            <p>This comprehensive index organizes GitHub Copilot documentation into a logical learning journey. Follow each stage sequentially to build your knowledge from fundamentals to advanced topics. Each link takes you directly to the official GitHub documentation.</p>
+        </div>
+        
+        <div class="nav-box">
+            <h3>🧭 Quick Navigation</h3>
+            <div class="nav-links">
+                <a href="#stage1" class="nav-link">Stage 1: Getting Started</a>
+                <a href="#stage2" class="nav-link">Stage 2: Core Features</a>
+                <a href="#stage3" class="nav-link">Stage 3: Advanced Usage</a>
+                <a href="#stage4" class="nav-link">Stage 4: Administration</a>
+                <a href="#stage5" class="nav-link">Stage 5: Optimization</a>
+                <a href="#stage6" class="nav-link">Stage 6: Mastery</a>
+            </div>
+        </div>
+
+        <!-- STAGE 1: GETTING STARTED -->
+        <div class="stage" data-stage="1" id="stage1">
+            <h2 class="stage-title">Getting Started with GitHub Copilot</h2>
+            <p class="stage-description">Begin your journey by understanding what Copilot is, choosing the right plan, and setting up your environment.</p>
+            
+            <div class="section">
+                <h3 class="section-title">Understanding GitHub Copilot</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/get-started/what-is-github-copilot" class="topic-link" target="_blank">What is GitHub Copilot?</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/get-started/quickstart" class="topic-link" target="_blank">Quickstart Guide</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/get-started/features" class="topic-link" target="_blank">Overview of Features</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Choosing Your Plan</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/get-started/plans" class="topic-link" target="_blank">Compare All Plans (Free, Pro, Business, Enterprise)</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/concepts/billing/individual-plans" class="topic-link" target="_blank">Individual Plans Explained</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises" class="topic-link" target="_blank">Organization & Enterprise Billing</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/get-started/choose-enterprise-plan" class="topic-link" target="_blank">Choosing the Right Enterprise Plan</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Account Setup & Management</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/manage-your-account/get-started-with-a-copilot-plan" class="topic-link" target="_blank">Get Started with a Copilot Plan</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/manage-your-account/get-free-access-to-copilot-pro" class="topic-link" target="_blank">Get Free Access to Copilot Pro</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/manage-your-account/view-and-change-your-copilot-plan" class="topic-link" target="_blank">View and Change Your Plan</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Installation & Setup</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/set-up/set-up-for-self" class="topic-link" target="_blank">Set Up for Individual Use</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-extension" class="topic-link" target="_blank">Install Copilot Extension in Your IDE</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-cli" class="topic-link" target="_blank">Install Copilot CLI</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/configure-personal-settings/configure-network-settings" class="topic-link" target="_blank">Configure Network Settings</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="key-concepts">
+                <h4>🎯 Key Takeaways for Stage 1</h4>
+                <p>✓ Understand what Copilot is and what it can do<br>
+                ✓ Choose the right plan for your needs<br>
+                ✓ Successfully install and configure Copilot<br>
+                ✓ Ready to start using basic features</p>
+            </div>
+        </div>
+
+        <!-- STAGE 2: CORE FEATURES -->
+        <div class="stage" data-stage="2" id="stage2">
+            <h2 class="stage-title">Core Features & Basic Usage</h2>
+            <p class="stage-description">Learn to use Copilot's main features: code suggestions, chat, and CLI interactions.</p>
+            
+            <div class="section">
+                <h3 class="section-title">Code Suggestions & Completions</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/concepts/completions/code-suggestions" class="topic-link" target="_blank">How Code Suggestions Work</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/get-code-suggestions/get-ide-code-suggestions" class="topic-link" target="_blank">Getting Code Suggestions in IDE</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/concepts/completions/text-completion" class="topic-link" target="_blank">Text Completion Features</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/concepts/completions/code-referencing" class="topic-link" target="_blank">Code Referencing & Matching</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/get-code-suggestions/find-matching-code" class="topic-link" target="_blank">Find Matching Code in Public Repositories</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">GitHub Copilot Chat</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/concepts/chat" class="topic-link" target="_blank">About GitHub Copilot Chat</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/chat-with-copilot/get-started-with-chat" class="topic-link" target="_blank">Getting Started with Chat</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-ide" class="topic-link" target="_blank">Chat in Your IDE</a>
+                        <ul class="subtopic-list">
+                            <li class="subtopic-item">Understanding slash commands</li>
+                            <li class="subtopic-item">Inline chat vs. chat panel</li>
+                            <li class="subtopic-item">Code selection and context</li>
+                        </ul>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-github" class="topic-link" target="_blank">Chat on GitHub.com</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-mobile" class="topic-link" target="_blank">Chat in GitHub Mobile</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-windows-terminal" class="topic-link" target="_blank">Chat in Windows Terminal</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Copilot CLI</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/concepts/agents/about-copilot-cli" class="topic-link" target="_blank">About Copilot CLI</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/use-copilot-agents/use-copilot-cli" class="topic-link" target="_blank">Using Copilot CLI</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/use-copilot-for-common-tasks/use-copilot-in-the-cli" class="topic-link" target="_blank">Common CLI Tasks with Copilot</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Common Development Tasks</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/use-copilot-for-common-tasks/use-copilot-to-create-or-update-issues" class="topic-link" target="_blank">Create or Update Issues</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/get-code-suggestions/write-pr-descriptions" class="topic-link" target="_blank">Write Pull Request Descriptions</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/use-copilot-for-common-tasks/create-a-pr-summary" class="topic-link" target="_blank">Create Pull Request Summaries</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="key-concepts">
+                <h4>🎯 Key Takeaways for Stage 2</h4>
+                <p>✓ Effectively use code suggestions and completions<br>
+                ✓ Master Copilot Chat across different environments<br>
+                ✓ Leverage CLI for command-line productivity<br>
+                ✓ Apply Copilot to everyday development tasks</p>
+            </div>
+        </div>
+
+        <!-- STAGE 3: ADVANCED USAGE -->
+        <div class="stage" data-stage="3" id="stage3">
+            <h2 class="stage-title">Advanced Usage & Customization</h2>
+            <p class="stage-description">Enhance your productivity with advanced features, AI agents, custom instructions, and context management.</p>
+            
+            <div class="section">
+                <h3 class="section-title">AI Models & Selection</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/concepts/auto-model-selection" class="topic-link" target="_blank">Auto Model Selection</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/reference/ai-models/supported-models" class="topic-link" target="_blank">Supported AI Models</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/reference/ai-models/model-comparison" class="topic-link" target="_blank">Model Comparison</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/use-ai-models/change-the-chat-model" class="topic-link" target="_blank">Change the Chat Model</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/use-ai-models/change-the-completion-model" class="topic-link" target="_blank">Change the Completion Model</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/use-ai-models/create-a-custom-model" class="topic-link" target="_blank">Create a Custom Model</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Copilot Agents</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/use-copilot-agents/manage-agents" class="topic-link" target="_blank">Manage Agents</a>
+                    </li>
+                    <li class="topic-item">
+                        <strong>Coding Agent:</strong>
+                        <ul class="subtopic-list">
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-coding-agent" target="_blank">About Coding Agent</a></li>
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/create-a-pr" target="_blank">Create a Pull Request</a></li>
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/make-changes-to-an-existing-pr" target="_blank">Update Existing PR</a></li>
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/review-copilot-prs" target="_blank">Review Copilot PRs</a></li>
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/track-copilot-sessions" target="_blank">Track Copilot Sessions</a></li>
+                        </ul>
+                    </li>
+                    <li class="topic-item">
+                        <strong>Code Review Agent:</strong>
+                        <ul class="subtopic-list">
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/concepts/agents/code-review" target="_blank">About Code Review</a></li>
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/how-tos/use-copilot-agents/request-a-code-review/use-code-review" target="_blank">Use Code Review</a></li>
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/how-tos/use-copilot-agents/request-a-code-review/configure-automatic-review" target="_blank">Configure Automatic Review</a></li>
+                        </ul>
+                    </li>
+                    <li class="topic-item">
+                        <strong>Custom Agents:</strong>
+                        <ul class="subtopic-list">
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-custom-agents" target="_blank">About Custom Agents</a></li>
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/create-custom-agents" target="_blank">Create Custom Agents</a></li>
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/test-custom-agents" target="_blank">Test Custom Agents</a></li>
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/reference/custom-agents-configuration" target="_blank">Custom Agents Configuration</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Custom Instructions</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/concepts/prompting/response-customization" class="topic-link" target="_blank">About Response Customization</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-personal-instructions" class="topic-link" target="_blank">Add Personal Instructions</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions" class="topic-link" target="_blank">Add Repository Instructions</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-organization-instructions" class="topic-link" target="_blank">Add Organization Instructions</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/use-custom-instructions" class="topic-link" target="_blank">Tutorial: Use Custom Instructions</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Context & Knowledge Management</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <strong>Copilot Spaces:</strong>
+                        <ul class="subtopic-list">
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/concepts/context/spaces" target="_blank">About Copilot Spaces</a></li>
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/how-tos/provide-context/use-copilot-spaces/create-copilot-spaces" target="_blank">Create Copilot Spaces</a></li>
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/how-tos/provide-context/use-copilot-spaces/use-copilot-spaces" target="_blank">Use Copilot Spaces</a></li>
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/how-tos/provide-context/use-copilot-spaces/collaborate-with-others" target="_blank">Collaborate with Others</a></li>
+                        </ul>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/concepts/context/repository-indexing" class="topic-link" target="_blank">Repository Indexing & Knowledge Bases</a>
+                    </li>
+                    <li class="topic-item">
+                        <strong>MCP (Model Context Protocol):</strong>
+                        <ul class="subtopic-list">
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/concepts/context/mcp" target="_blank">About MCP</a></li>
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp/extend-copilot-chat-with-mcp" target="_blank">Extend Copilot Chat with MCP</a></li>
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp/set-up-the-github-mcp-server" target="_blank">Set Up GitHub MCP Server</a></li>
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp/use-the-github-mcp-server" target="_blank">Use GitHub MCP Server</a></li>
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/tutorials/enhance-agent-mode-with-mcp" target="_blank">Tutorial: Enhance Agent Mode with MCP</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Spark - Build Apps with AI</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/concepts/spark" class="topic-link" target="_blank">About Spark</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/spark/your-first-spark" class="topic-link" target="_blank">Your First Spark</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/spark/prompt-tips" class="topic-link" target="_blank">Spark Prompt Tips</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/spark/build-apps-with-spark" class="topic-link" target="_blank">Build and Deploy Apps</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="key-concepts">
+                <h4>🎯 Key Takeaways for Stage 3</h4>
+                <p>✓ Choose and configure the best AI models for your needs<br>
+                ✓ Leverage agents to automate complex development tasks<br>
+                ✓ Customize Copilot's behavior with custom instructions<br>
+                ✓ Manage context effectively with Spaces and MCP<br>
+                ✓ Build applications with Spark</p>
+            </div>
+        </div>
+
+        <!-- STAGE 4: ADMINISTRATION -->
+        <div class="stage" data-stage="4" id="stage4">
+            <h2 class="stage-title">Administration & Team Management</h2>
+            <p class="stage-description">Learn how to set up, manage, and administer Copilot for organizations and enterprises.</p>
+            
+            <div class="section">
+                <h3 class="section-title">Organization Setup</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/set-up/set-up-for-organization" class="topic-link" target="_blank">Set Up for Organization</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-plan/subscribe" class="topic-link" target="_blank">Subscribe to Copilot Business</a>
+                    </li>
+                    <li class="topic-item">
+                        <strong>Manage Access:</strong>
+                        <ul class="subtopic-list">
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-access/grant-access" target="_blank">Grant Access to Users</a></li>
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-access/manage-requests-for-access" target="_blank">Manage Requests for Access</a></li>
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-access/revoke-access" target="_blank">Revoke Access</a></li>
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-access/manage-network-access" target="_blank">Manage Network Access</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Enterprise Setup</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/set-up/set-up-for-enterprise" class="topic-link" target="_blank">Set Up for Enterprise</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/set-up/set-up-a-dedicated-enterprise-for-copilot-business" class="topic-link" target="_blank">Set Up Dedicated Enterprise</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/concepts/about-enterprise-accounts-for-copilot-business" class="topic-link" target="_blank">About Copilot-Only Enterprises</a>
+                    </li>
+                    <li class="topic-item">
+                        <strong>Manage Plan:</strong>
+                        <ul class="subtopic-list">
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-plan/subscribe" target="_blank">Subscribe to Enterprise Plan</a></li>
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-plan/upgrade-plan" target="_blank">Upgrade Plan</a></li>
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-plan/downgrade-subscription" target="_blank">Downgrade Subscription</a></li>
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-plan/cancel-plan" target="_blank">Cancel Plan</a></li>
+                        </ul>
+                    </li>
+                    <li class="topic-item">
+                        <strong>Manage Access:</strong>
+                        <ul class="subtopic-list">
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-access/grant-access" target="_blank">Grant Access</a></li>
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-access/disable-for-organizations" target="_blank">Disable for Organizations</a></li>
+                            <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-access/view-license-usage" target="_blank">View License Usage</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Policies & Governance</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/concepts/policies" class="topic-link" target="_blank">Understanding Copilot Policies</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-policies" class="topic-link" target="_blank">Manage Organization Policies</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-enterprise-policies" class="topic-link" target="_blank">Manage Enterprise Policies</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/reference/policy-conflicts" class="topic-link" target="_blank">Resolve Policy Conflicts</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Content Exclusions & Security</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/concepts/context/content-exclusion" class="topic-link" target="_blank">About Content Exclusion</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/configure-content-exclusion/exclude-content-from-copilot" class="topic-link" target="_blank">Exclude Content from Copilot</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/configure-content-exclusion/review-changes" class="topic-link" target="_blank">Review Content Exclusion Changes</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/reference/review-excluded-files" class="topic-link" target="_blank">Review Excluded Files</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/reference/copilot-allowlist-reference" class="topic-link" target="_blank">Copilot Allowlist Reference</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Monitoring & Audit</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/review-activity/review-user-activity-data" class="topic-link" target="_blank">Review User Activity Data</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/review-activity/review-audit-logs" class="topic-link" target="_blank">Review Audit Logs</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/reference/agentic-audit-log-events" class="topic-link" target="_blank">Agentic Audit Log Events</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/administer-copilot/download-activity-report" class="topic-link" target="_blank">Download Activity Report</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Agent Management (Enterprise)</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/add-copilot-coding-agent" class="topic-link" target="_blank">Add Copilot Coding Agent (Org)</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/prepare-for-custom-agents" class="topic-link" target="_blank">Prepare for Custom Agents (Org)</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-agents/manage-copilot-coding-agent" class="topic-link" target="_blank">Manage Copilot Coding Agent (Enterprise)</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-agents/manage-copilot-code-review" class="topic-link" target="_blank">Manage Copilot Code Review (Enterprise)</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-agents/monitor-agentic-activity" class="topic-link" target="_blank">Monitor Agentic Activity</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="key-concepts">
+                <h4>🎯 Key Takeaways for Stage 4</h4>
+                <p>✓ Set up and configure Copilot for teams<br>
+                ✓ Manage user access and permissions<br>
+                ✓ Implement policies and content exclusions<br>
+                ✓ Monitor usage and audit activity<br>
+                ✓ Manage agents at enterprise scale</p>
+            </div>
+        </div>
+
+        <!-- STAGE 5: OPTIMIZATION -->
+        <div class="stage" data-stage="5" id="stage5">
+            <h2 class="stage-title">Optimization & Best Practices</h2>
+            <p class="stage-description">Master prompt engineering, optimize performance, and adopt industry best practices.</p>
+            
+            <div class="section">
+                <h3 class="section-title">Prompt Engineering</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering" class="topic-link" target="_blank">Prompt Engineering Fundamentals</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/get-started/best-practices" class="topic-link" target="_blank">Best Practices for Using Copilot</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/reference/cheat-sheet" class="topic-link" target="_blank">Copilot Cheat Sheet</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/copilot/tutorials/copilot-chat-cookbook" class="topic-link" target="_blank">GitHub Copilot Chat Cookbook (All Prompts)</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Common Development Workflows</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/explore-a-codebase" class="topic-link" target="_blank">Explore a Codebase</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/explore-issues-and-discussions" class="topic-link" target="_blank">Explore Issues and Discussions</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/explore-pull-requests" class="topic-link" target="_blank">Explore Pull Requests</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/speed-up-development-work" class="topic-link" target="_blank">Speed Up Development Work</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Code Quality & Testing</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/write-tests" class="topic-link" target="_blank">Write Tests with Copilot</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook/testing-code/generate-unit-tests" class="topic-link" target="_blank">Generate Unit Tests</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook/testing-code/create-mock-objects" class="topic-link" target="_blank">Create Mock Objects</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook/testing-code/create-end-to-end-tests" class="topic-link" target="_blank">Create End-to-End Tests</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/optimize-code-reviews" class="topic-link" target="_blank">Optimize Code Reviews</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/review-ai-generated-code" class="topic-link" target="_blank">Review AI-Generated Code</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Refactoring & Modernization</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/refactor-code" class="topic-link" target="_blank">Refactor Code</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook/refactor-code/improve-code-readability" class="topic-link" target="_blank">Improve Code Readability</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook/refactor-code/refactor-for-optimization" class="topic-link" target="_blank">Refactor for Optimization</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/modernize-legacy-code" class="topic-link" target="_blank">Modernize Legacy Code</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/reduce-technical-debt" class="topic-link" target="_blank">Reduce Technical Debt</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook/refactor-code/translate-code" class="topic-link" target="_blank">Translate Code Between Languages</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Security & Performance</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook/analyze-security/secure-your-repository" class="topic-link" target="_blank">Secure Your Repository</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook/analyze-security/find-vulnerabilities" class="topic-link" target="_blank">Find Security Vulnerabilities</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook/analyze-security/manage-dependency-updates" class="topic-link" target="_blank">Manage Dependency Updates</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook/refactor-code/refactor-for-sustainability" class="topic-link" target="_blank">Refactor for Sustainability</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Documentation & Communication</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook/document-code/document-legacy-code" class="topic-link" target="_blank">Document Legacy Code</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook/document-code/explain-complex-logic" class="topic-link" target="_blank">Explain Complex Logic</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook/document-code/sync-documentation" class="topic-link" target="_blank">Sync Documentation</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook/communicate-effectively/creating-diagrams" class="topic-link" target="_blank">Create Diagrams</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook/communicate-effectively/creating-templates" class="topic-link" target="_blank">Create Templates</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Project Management</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/plan-a-project" class="topic-link" target="_blank">Plan a Project</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/migrate-a-project" class="topic-link" target="_blank">Migrate a Project</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/upgrade-projects" class="topic-link" target="_blank">Upgrade Projects</a>
+                    </li>
+                    <li class="topic-item">
+                        <a href="https://docs.github.com/en/copilot/tutorials/learn-a-new-language" class="topic-link" target="_blank">Learn a New Language or Framework</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="key-concepts">
+                <h4>🎯 Key Takeaways for Stage 5</h4>
+                <p>✓ Master prompt engineering techniques<br>
+                ✓ Apply Copilot to complete development workflows<br>
+                ✓ Improve code quality through testing and refactoring<br>
+                ✓ Enhance security and performance<br>
+                ✓ Streamline documentation and communication</p>
+            </div>
+        </div>
+
+        <!-- STAGE 6: MASTERY -->
+    <div class="stage" data-stage="6" id="stage6">
+            <h2 class="stage-title">Mastery & Enterprise Adoption</h2>
+            <p class="stage-description">Achieve mastery through troubleshooting, metrics analysis, scaling adoption, and responsible AI practices.</p>
+            
+           <div class="section">
+            <h3 class="section-title">Troubleshooting & Support</h3>
+            <ul class="topic-list">
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/how-tos/troubleshoot-copilot/troubleshoot-common-issues" class="topic-link" target="_blank">Troubleshoot Common Issues</a>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/how-tos/troubleshoot-copilot/view-logs" class="topic-link" target="_blank">View Copilot Logs</a>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/how-tos/troubleshoot-copilot/troubleshoot-firewall-settings" class="topic-link" target="_blank">Troubleshoot Firewall Settings</a>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/how-tos/troubleshoot-copilot/troubleshoot-network-errors" class="topic-link" target="_blank">Troubleshoot Network Errors</a>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/troubleshoot-coding-agent" class="topic-link" target="_blank">Troubleshoot Coding Agent</a>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/how-tos/troubleshoot-copilot/troubleshoot-spark" class="topic-link" target="_blank">Troubleshoot Spark</a>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/concepts/network-settings" class="topic-link" target="_blank">Network Settings Overview</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h3 class="section-title">Usage Metrics & Analytics</h3>
+            <ul class="topic-list">
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/concepts/copilot-metrics" class="topic-link" target="_blank">Understanding Copilot Usage Metrics</a>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/reference/copilot-usage-metrics/copilot-usage-metrics" class="topic-link" target="_blank">Copilot Usage Metrics Data</a>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/reference/copilot-usage-metrics/interpret-copilot-metrics" class="topic-link" target="_blank">Interpret Usage Metrics</a>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/reference/copilot-usage-metrics/reconciling-usage-metrics" class="topic-link" target="_blank">Reconciling Copilot Usage Metrics</a>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/reference/copilot-usage-metrics/lines-of-code-metrics" class="topic-link" target="_blank">Copilot Lines of Code Metrics</a>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/view-usage-and-adoption" class="topic-link" target="_blank">View Usage and Adoption (Enterprise)</a>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/reference/metrics-data" class="topic-link" target="_blank">Metrics Data Reference</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h3 class="section-title">Billing & Cost Management</h3>
+            <ul class="topic-list">
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/concepts/billing/copilot-requests" class="topic-link" target="_blank">Understanding Copilot Requests</a>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/concepts/rate-limits" class="topic-link" target="_blank">Rate Limits</a>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/how-tos/manage-and-track-spending/monitor-premium-requests" class="topic-link" target="_blank">Monitor Premium Requests</a>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/how-tos/manage-and-track-spending/manage-request-allowances" class="topic-link" target="_blank">Manage Request Allowances</a>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/how-tos/manage-and-track-spending/manage-company-spending" class="topic-link" target="_blank">Manage Company Spending</a>
+                </li>
+                <li class="topic-item">
+                    <strong>Billing Reference:</strong>
+                    <ul class="subtopic-list">
+                        <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/reference/copilot-billing/billing-cycle" target="_blank">Billing Cycle</a></li>
+                        <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/reference/copilot-billing/seat-assignment" target="_blank">Seat Assignment</a></li>
+                        <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/reference/copilot-billing/license-changes" target="_blank">License Changes</a></li>
+                        <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/reference/copilot-billing/azure-billing" target="_blank">Azure Billing</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h3 class="section-title">Responsible AI & Ethics</h3>
+            <ul class="topic-list">
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/responsible-use/copilot-code-completion" class="topic-link" target="_blank">Responsible Use: Code Completion</a>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/responsible-use/chat-in-your-ide" class="topic-link" target="_blank">Responsible Use: Chat in IDE</a>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/responsible-use/chat-in-github" class="topic-link" target="_blank">Responsible Use: Chat in GitHub</a>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/responsible-use/copilot-cli" class="topic-link" target="_blank">Responsible Use: Copilot CLI</a>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent" class="topic-link" target="_blank">Responsible Use: Coding Agent</a>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/responsible-use/code-review" class="topic-link" target="_blank">Responsible Use: Code Review</a>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/responsible-use/spark" class="topic-link" target="_blank">Responsible Use: Spark</a>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/responsible-use/copilot-spaces" class="topic-link" target="_blank">Responsible Use: Copilot Spaces</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h3 class="section-title">Enterprise Rollout & Adoption</h3>
+            <ul class="topic-list">
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/get-started/achieve-company-goals" class="topic-link" target="_blank">Achieve Company Goals with Copilot</a>
+                </li>
+                <li class="topic-item">
+                    <strong>Roll Out at Scale:</strong>
+                    <ul class="subtopic-list">
+                        <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/tutorials/roll-out-at-scale/assign-licenses/set-up-self-serve-licenses" target="_blank">Set Up Self-Serve Licenses</a></li>
+                        <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/tutorials/roll-out-at-scale/assign-licenses/track-usage-and-adoption" target="_blank">Track Usage and Adoption</a></li>
+                        <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/tutorials/roll-out-at-scale/assign-licenses/remind-inactive-users" target="_blank">Remind Inactive Users</a></li>
+                        <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/tutorials/roll-out-at-scale/establish-ai-managers" target="_blank">Establish AI Managers</a></li>
+                    </ul>
+                </li>
+                <li class="topic-item">
+                    <strong>Enable Developers:</strong>
+                    <ul class="subtopic-list">
+                        <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/tutorials/roll-out-at-scale/enable-developers/drive-adoption" target="_blank">Drive Adoption</a></li>
+                        <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/tutorials/roll-out-at-scale/enable-developers/integrate-ai-agents" target="_blank">Integrate AI Agents</a></li>
+                    </ul>
+                </li>
+                <li class="topic-item">
+                    <strong>Drive Downstream Impact:</strong>
+                    <ul class="subtopic-list">
+                        <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/tutorials/roll-out-at-scale/drive-downstream-impact/increase-test-coverage" target="_blank">Increase Test Coverage</a></li>
+                        <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/tutorials/roll-out-at-scale/drive-downstream-impact/accelerate-pull-requests" target="_blank">Accelerate Pull Requests</a></li>
+                        <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/tutorials/roll-out-at-scale/drive-downstream-impact/reduce-security-debt" target="_blank">Reduce Security Debt</a></li>
+                    </ul>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/tutorials/roll-out-at-scale/measure-success" class="topic-link" target="_blank">Measure Trial Success</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h3 class="section-title">Advanced Configuration & Tools</h3>
+            <ul class="topic-list">
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/concepts/tools/ai-tools" class="topic-link" target="_blank">Understanding AI Tools</a>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/concepts/tools/about-copilot-integrations" class="topic-link" target="_blank">About Copilot Integrations</a>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/use-your-own-api-keys" class="topic-link" target="_blank">Use Your Own API Keys (Org)</a>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/use-your-own-api-keys" class="topic-link" target="_blank">Use Your Own API Keys (Enterprise)</a>
+                </li>
+                <li class="topic-item">
+                    <strong>MCP Management:</strong>
+                    <ul class="subtopic-list">
+                        <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/concepts/mcp-management" target="_blank">About MCP Management</a></li>
+                        <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-mcp-usage/configure-mcp-registry" target="_blank">Configure MCP Registry</a></li>
+                        <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-mcp-usage/configure-mcp-server-access" target="_blank">Configure MCP Server Access</a></li>
+                        <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/reference/mcp-allowlist-enforcement" target="_blank">MCP Allowlist Enforcement</a></li>
+                    </ul>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/reference/keyboard-shortcuts" class="topic-link" target="_blank">Keyboard Shortcuts Reference</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h3 class="section-title">Advanced Tutorials & Use Cases</h3>
+            <ul class="topic-list">
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/tutorials/coding-agent/pilot-coding-agent" class="topic-link" target="_blank">Pilot Coding Agent</a>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/tutorials/coding-agent/get-the-best-results" class="topic-link" target="_blank">Get the Best Results from Coding Agent</a>
+                </li>
+                <li class="topic-item">
+                    <a href="https://docs.github.com/en/copilot/tutorials/compare-ai-models" class="topic-link" target="_blank">Compare AI Models</a>
+                </li>
+                <li class="topic-item">
+                    <strong>Customization Library:</strong>
+                    <ul class="subtopic-list">
+                        <li class="subtopic-item"><a href="https://docs.github.com/copilot/tutorials/customization-library" target="_blank">All Customizations</a></li>
+                        <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/tutorials/customization-library/custom-instructions/your-first-custom-instructions" target="_blank">Your First Custom Instructions</a></li>
+                        <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/tutorials/customization-library/prompt-files/your-first-prompt-file" target="_blank">Your First Prompt File</a></li>
+                        <li class="subtopic-item"><a href="https://docs.github.com/en/copilot/tutorials/customization-library/custom-agents/your-first-custom-agent" target="_blank">Your First Custom Agent</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="key-concepts">
+            <h4>🎯 Key Takeaways for Stage 6</h4>
+            <p>✓ Troubleshoot and resolve issues effectively<br>
+            ✓ Analyze metrics and measure ROI<br>
+            ✓ Manage costs and optimize spending<br>
+            ✓ Practice responsible AI usage<br>
+            ✓ Successfully roll out Copilot at enterprise scale<br>
+            ✓ Configure advanced integrations and tools</p>
+        </div>
+        
+        <div class="completion-badge">
+            🎓 Congratulations! You've completed the GitHub Copilot Learning Path!<br>
+            You now have comprehensive knowledge from setup to enterprise mastery.
+        </div>
+	</div>
+</body>
+</html>

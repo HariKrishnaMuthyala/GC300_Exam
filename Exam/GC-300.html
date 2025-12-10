@@ -1,0 +1,438 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GitHub Copilot GH-300 â€” 3-Layer Curriculum Structure</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #0b1220;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #60a5fa;
+      --link: #93c5fd;
+      --border: rgba(255,255,255,0.08);
+      --layer1: #1e40af;
+      --layer2: #0d47a1;
+      --layer3: #4c1d95;
+    }
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(1000px 600px at 10% 0%, #111827 0%, var(--bg) 60%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header, section, footer {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    header {
+      padding: 1.25rem 1.5rem;
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.25);
+    }
+    h1 { margin: 0 0 0.25rem; font-weight: 700; letter-spacing: 0.2px; }
+    .sub { color: var(--muted); margin: 0.25rem 0 0.75rem; }
+    nav {
+      display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; margin-top: 0.75rem;
+    }
+    nav a {
+      color: var(--link);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.25rem 0.5rem;
+      border-radius: 8px;
+    }
+    /* Layer Styles */
+    .layer1 { 
+      background: linear-gradient(135deg, rgba(30,64,175,0.15), rgba(30,64,175,0.08)); 
+      border-left: 4px solid var(--layer1); 
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+    .layer2 { 
+      background: linear-gradient(135deg, rgba(13,71,161,0.12), rgba(13,71,161,0.06)); 
+      border-left: 3px solid var(--layer2); 
+      margin-left: 1.5rem; 
+      margin-top: 1rem;
+      padding: 1rem 1.25rem;
+      border-radius: 6px;
+    }
+    
+    section {
+      padding: 1.25rem 1.5rem;
+      margin-top: 1.25rem;
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+    }
+    h2 { margin: 0; font-size: 1.35rem; }
+    h3 { margin: 0.5rem 0 0; font-size: 1.1rem; color: var(--accent); }
+    .weight { color: var(--muted); font-size: 0.95rem; margin-left: 0.5rem; }
+    ul { margin: 0.75rem 0 0.25rem; padding-left: 1.25rem; }
+    li { margin: 0.35rem 0; font-size: 0.95rem; }
+    a.item {
+      color: var(--link);
+      text-decoration: none;
+    }
+    a.item:hover { text-decoration: underline; }
+    footer {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+    .layer-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+      margin: 0 0 0.75rem 0;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GitHub Copilot GH-300 â€” 3-Layer Curriculum Structure</h1>
+    <p class="sub">Hierarchical: DOMAIN (Layer 1) â†’ SUBCATEGORY (Layer 2) â†’ SKILL (Layer 3)</p>
+    <nav>
+      <a href="#domain-2">Domain 2 (31%)</a>
+      <a href="#domain-3">Domain 3 (15%)</a>
+      <a href="#domain-7">Domain 7 (15%)</a>
+      <a href="#domain-5">Domain 5 (14%)</a>
+      <a href="#domain-4">Domain 4 (9%)</a>
+      <a href="#domain-6">Domain 6 (9%)</a>
+      <a href="#domain-1">Domain 1 (7%)</a>
+    </nav>
+  </header>
+
+  <!-- ============== DOMAIN 2: 31% ============== -->
+  <section id="domain-2">
+    <div class="layer1">
+      <p class="layer-label">ðŸ”¹ Layer 1: Domain</p>
+      <h2>Domain 2: GitHub Copilot plans and features <span class="weight">(31%)</span></h2>
+      
+      <!-- Subcategory 1 -->
+      <div class="layer2">
+        <p class="layer-label">â–¸ Layer 2: Subcategory</p>
+        <h3>Identify the different GitHub Copilot plans</h3>
+        <ul>
+          <li><a class="item" href="https://docs.github.com/en/copilot/get-started/plans">Understand the differences between Copilot Individual, Copilot Business, Copilot Enterprise, and Copilot Business for non-GHE</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/get-started/what-is-github-copilot">Understand Copilot for non-GitHub customers</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/get-started/what-is-github-copilot">Define GitHub Copilot in the IDE</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/chat">Define GitHub Copilot Chat in the IDE</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/using-github-copilot/asking-github-copilot-questions-in-your-ide">Describe the different ways to trigger GitHub Copilot (chat, inline chat, suggestions, multiple suggestions, exception handling, CLI)</a></li>
+        </ul>
+      </div>
+
+      <!-- Subcategory 2 -->
+      <div class="layer2">
+        <p class="layer-label">â–¸ Layer 2: Subcategory</p>
+        <h3>Identify the main features with GitHub Copilot Individual</h3>
+        <ul>
+          <li><a class="item" href="https://docs.github.com/en/copilot/get-started/plans">Explain the difference between GitHub Copilot Individual and GitHub Copilot Business (data exclusions, IP indemnity, billing, etc.)</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/get-started/features">Understand the available features in the IDE for GitHub Copilot Individual</a></li>
+        </ul>
+      </div>
+
+      <!-- Subcategory 3 -->
+      <div class="layer2">
+        <p class="layer-label">â–¸ Layer 2: Subcategory</p>
+        <h3>Identify the main features of GitHub Copilot Business</h3>
+        <ul>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/context/content-exclusion">Demonstrate how to exclude specific files from GitHub Copilot</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-policies">Demonstrate how to establish organization-wide policy management</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/review-activity">Describe the purpose of organization audit logs for GitHub Copilot Business</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/review-activity">Explain how to search audit log events for GitHub Copilot Business</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-plan">Explain how to manage GitHub Copilot Business subscriptions via the REST API</a></li>
+        </ul>
+      </div>
+
+      <!-- Subcategory 4 -->
+      <div class="layer2">
+        <p class="layer-label">â–¸ Layer 2: Subcategory</p>
+        <h3>Identify the main features with GitHub Copilot Chat</h3>
+        <ul>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/chat">Identify the use cases where GitHub Copilot Chat is most effective</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/prompt-engineering-for-copilot-chat">Explain how to improve performance for GitHub Copilot Chat</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/chat">Identify the limitations of using GitHub Copilot Chat</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/using-github-copilot/asking-github-copilot-questions-in-your-ide">Identify the available options for using code suggestions from GitHub Copilot Chat</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/using-github-copilot/asking-github-copilot-questions-in-your-ide">Explain how to share feedback about GitHub Copilot Chat</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/get-started/best-practices">Identify the common best practices for using GitHub Copilot Chat</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/using-github-copilot/asking-github-copilot-questions-in-your-ide">Identify the available slash commands when using GitHub Copilot Chat</a></li>
+        </ul>
+      </div>
+
+      <!-- Subcategory 5 -->
+      <div class="layer2">
+        <p class="layer-label">â–¸ Layer 2: Subcategory</p>
+        <h3>Identify the main features with GitHub Copilot Enterprise</h3>
+        <ul>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/chat">Explain the benefits of using GitHub Copilot Chat on GitHub.com</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/using-github-copilot/creating-a-pull-request-summary-with-github-copilot">Explain GitHub Copilot pull request summaries</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/context/spaces">Explain how to configure and use Knowledge Bases within GitHub Copilot Enterprise</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/context/spaces">Describe the different types of knowledge that can be stored in a Knowledge Base (code snippets, best practices, design patterns)</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/context/spaces">Explain the benefits of using Knowledge Bases for code completion and review</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/context/spaces">Describe instructions for creating, managing, and searching Knowledge Bases within GitHub Copilot Enterprise</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/use-your-own-api-keys">Explain the benefits of using custom models</a></li>
+        </ul>
+      </div>
+
+      <!-- Subcategory 6 -->
+      <div class="layer2">
+        <p class="layer-label">â–¸ Layer 2: Subcategory</p>
+        <h3>Using GitHub Copilot in the CLI</h3>
+        <ul>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/agents/about-copilot-cli">Discuss the steps for installing GitHub Copilot in the CLI</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/agents/about-copilot-cli">Identify the common commands when using GitHub Copilot in the CLI</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/agents/about-copilot-cli">Identify the multiple settings you can configure within GitHub Copilot in the CLI</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== DOMAIN 3: 15% ============== -->
+  <section id="domain-3">
+    <div class="layer1">
+      <p class="layer-label">ðŸ”¹ Layer 1: Domain</p>
+      <h2>Domain 3: How GitHub Copilot works and handles data <span class="weight">(15%)</span></h2>
+      
+      <!-- Subcategory 1 -->
+      <div class="layer2">
+        <p class="layer-label">â–¸ Layer 2: Subcategory</p>
+        <h3>Describe the data pipeline lifecycle of GitHub Copilot code suggestions in the IDE</h3>
+        <ul>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/completions/code-suggestions">Visualize the lifecycle of a GitHub Copilot code suggestion</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/context/repository-indexing">Explain how GitHub Copilot gathers context</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/prompt-engineering-for-copilot-chat">Explain how GitHub Copilot builds a prompt</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/context/content-exclusion">Describe the proxy service and the filters each prompt goes through</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/chat">Describe how the large language model produces its response</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/completions/code-suggestions">Explain the post-processing of GitHub Copilot's responses through the proxy server</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/completions/code-referencing">Identify how GitHub Copilot identifies matching code</a></li>
+        </ul>
+      </div>
+
+      <!-- Subcategory 2 -->
+      <div class="layer2">
+        <p class="layer-label">â–¸ Layer 2: Subcategory</p>
+        <h3>Describe how GitHub Copilot handles data</h3>
+        <ul>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/billing/individual-plans">Describe how the data in GitHub Copilot Individual is used and shared</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/completions">Explain the data flow for GitHub Copilot code completion</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/chat">Explain the data flow for GitHub Copilot Chat</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/chat">Describe the different types of input processing for GitHub Copilot Chat</a></li>
+        </ul>
+      </div>
+
+      <!-- Subcategory 3 -->
+      <div class="layer2">
+        <p class="layer-label">â–¸ Layer 2: Subcategory</p>
+        <h3>Describe the limitations of GitHub Copilot (and LLMs in general)</h3>
+        <ul>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/completions/code-referencing">Describe the effect of most seen examples on the source data</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/completions/code-suggestions">Describe the age of code suggestions (how old and relevant the data is)</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/get-started/best-practices">Describe the nature of GitHub Copilot providing reasoning and context from a prompt vs calculations</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/chat">Describe limited context windows</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== DOMAIN 7: 15% ============== -->
+  <section id="domain-7">
+    <div class="layer1">
+      <p class="layer-label">ðŸ”¹ Layer 1: Domain</p>
+      <h2>Domain 7: Privacy fundamentals and context exclusions <span class="weight">(15%)</span></h2>
+      
+      <!-- Subcategory 1 -->
+      <div class="layer2">
+        <p class="layer-label">â–¸ Layer 2: Subcategory</p>
+        <h3>Enhance code quality through testing</h3>
+        <ul>
+          <li><a class="item" href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook">Describe how to improve the effectiveness of existing tests with GitHub Copilot's suggestions</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook">Describe how to generate boilerplate code for various test types using GitHub Copilot</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook">Explain how GitHub Copilot can help write assertions for different testing scenarios</a></li>
+        </ul>
+      </div>
+
+      <!-- Subcategory 2 -->
+      <div class="layer2">
+        <p class="layer-label">â–¸ Layer 2: Subcategory</p>
+        <h3>Leverage GitHub Copilot for security and performance</h3>
+        <ul>
+          <li><a class="item" href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook">Describe how GitHub Copilot can learn from existing tests to suggest improvements and identify potential issues in the code</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/using-github-copilot/code-review/using-copilot-code-review">Explain how to use GitHub Copilot Enterprise for collaborative code reviews, leveraging security best practices, and performance considerations</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook">Explain how GitHub Copilot can identify potential security vulnerabilities in your code</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook">Describe how GitHub Copilot can suggest code optimizations for improved performance</a></li>
+        </ul>
+      </div>
+
+      <!-- Subcategory 3 -->
+      <div class="layer2">
+        <p class="layer-label">â–¸ Layer 2: Subcategory</p>
+        <h3>Identify content exclusions</h3>
+        <ul>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/context/content-exclusion">Describe how to configure content exclusions in a repository and organization</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/context/content-exclusion">Explain the effects of content exclusions</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/context/content-exclusion">Explain the limitations of content exclusions</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/get-started/best-practices">Describe the ownership of GitHub Copilot outputs</a></li>
+        </ul>
+      </div>
+
+      <!-- Subcategory 4 -->
+      <div class="layer2">
+        <p class="layer-label">â–¸ Layer 2: Subcategory</p>
+        <h3>Safeguards</h3>
+        <ul>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/completions/code-referencing">Describe the duplication detector filter</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/get-started/plans">Explain contractual protection</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/how-tos/manage-your-account/manage-policies">Explain how to configure GitHub Copilot settings on GitHub.com</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/how-tos/manage-your-account/manage-policies">Enable/disable duplication detection</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/how-tos/manage-your-account/manage-policies">Enable/disable prompt and suggestion collection</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/responsible-use">Describe security checks and warnings</a></li>
+        </ul>
+      </div>
+
+      <!-- Subcategory 5 -->
+      <div class="layer2">
+        <p class="layer-label">â–¸ Layer 2: Subcategory</p>
+        <h3>Troubleshooting</h3>
+        <ul>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/completions/code-suggestions">Explain how to solve the issue if code suggestions are not showing in your editor for some files</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/context/content-exclusion">Explain why context exclusions may not be applied</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/using-github-copilot/asking-github-copilot-questions-in-your-ide">Explain how to trigger GitHub Copilot when suggestions are either absent or not ideal</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/context/content-exclusion">Explain steps for context exclusions in code editors</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== DOMAIN 5: 14% ============== -->
+  <section id="domain-5">
+    <div class="layer1">
+      <p class="layer-label">ðŸ”¹ Layer 1: Domain</p>
+      <h2>Domain 5: Developer use cases for AI <span class="weight">(14%)</span></h2>
+      
+      <!-- Subcategory 1 -->
+      <div class="layer2">
+        <p class="layer-label">â–¸ Layer 2: Subcategory</p>
+        <h3>Improve developer productivity</h3>
+        <ul>
+          <li><a class="item" href="https://docs.github.com/en/copilot/get-started/best-practices">Describe how AI can improve common use cases for developer productivity</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook">Learning new programming languages and frameworks</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook">Language translation</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/get-started/best-practices">Context switching</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook">Writing documentation</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/chat">Personalized context-aware responses</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook">Generating sample data</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook">Modernizing legacy applications</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook">Debugging code</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook">Data science</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook">Code refactoring</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/get-started/best-practices">Discuss how GitHub Copilot can help with SDLC management</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/chat">Describe the limitations of using GitHub Copilot</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/billing/copilot-requests">Describe how to use the productivity API to see how GitHub Copilot impacts coding</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== DOMAIN 4: 9% ============== -->
+  <section id="domain-4">
+    <div class="layer1">
+      <p class="layer-label">ðŸ”¹ Layer 1: Domain</p>
+      <h2>Domain 4: Prompt crafting and prompt engineering <span class="weight">(9%)</span></h2>
+      
+      <!-- Subcategory 1 -->
+      <div class="layer2">
+        <p class="layer-label">â–¸ Layer 2: Subcategory</p>
+        <h3>Describe the fundamentals of prompt crafting</h3>
+        <ul>
+          <li><a class="item" href="https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/prompt-engineering-for-copilot-chat">Describe how the context for the prompt is determined</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/prompt-engineering-for-copilot-chat">Describe the language options for prompting GitHub Copilot</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/prompt-engineering-for-copilot-chat">Describe the different parts of a prompt</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/get-started/best-practices">Describe the role of prompting</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/prompt-engineering-for-copilot-chat">Describe the difference between zero-shot and few-shot prompting</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/prompt-engineering-for-copilot-chat">Describe the way chat history is used with GitHub Copilot</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/get-started/best-practices">Identify prompt crafting best practices when using GitHub Copilot</a></li>
+        </ul>
+      </div>
+
+      <!-- Subcategory 2 -->
+      <div class="layer2">
+        <p class="layer-label">â–¸ Layer 2: Subcategory</p>
+        <h3>Describe the fundamentals of prompt engineering</h3>
+        <ul>
+          <li><a class="item" href="https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/prompt-engineering-for-copilot-chat">Explain prompt engineering principles, training methods, and best practices</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/prompt-engineering-for-copilot-chat">Describe the prompt process flow</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== DOMAIN 6: 9% ============== -->
+  <section id="domain-6">
+    <div class="layer1">
+      <p class="layer-label">ðŸ”¹ Layer 1: Domain</p>
+      <h2>Domain 6: Testing with GitHub Copilot <span class="weight">(9%)</span></h2>
+      
+      <!-- Subcategory 1 -->
+      <div class="layer2">
+        <p class="layer-label">â–¸ Layer 2: Subcategory</p>
+        <h3>Describe the options for generating testing for your code</h3>
+        <ul>
+          <li><a class="item" href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook">Describe how GitHub Copilot can be used to add unit tests, integration tests, and other test types to your code</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook">Explain how GitHub Copilot can assist in identifying edge cases and suggesting tests to address them</a></li>
+        </ul>
+      </div>
+
+      <!-- Subcategory 2 -->
+      <div class="layer2">
+        <p class="layer-label">â–¸ Layer 2: Subcategory</p>
+        <h3>Describe the different SKUs for GitHub Copilot</h3>
+        <ul>
+          <li><a class="item" href="https://docs.github.com/en/copilot/get-started/plans">Describe the different SKUs and the privacy considerations for GitHub Copilot</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-policies">Describe the different code suggestion configuration options on the organization level</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/policies">Describe the GitHub Copilot Editor config file</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== DOMAIN 1: 7% ============== -->
+  <section id="domain-1">
+    <div class="layer1">
+      <p class="layer-label">ðŸ”¹ Layer 1: Domain</p>
+      <h2>Domain 1: Responsible AI <span class="weight">(7%)</span></h2>
+      
+      <!-- Subcategory 1 -->
+      <div class="layer2">
+        <p class="layer-label">â–¸ Layer 2: Subcategory</p>
+        <h3>Explain responsible usage of AI</h3>
+        <ul>
+          <li><a class="item" href="https://docs.github.com/en/copilot/responsible-use">Describe the risks associated with using AI</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/concepts/chat">Explain the limitations of using generative AI tools (depth of source data for the model, bias in the data, etc.)</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/get-started/best-practices">Explain the need to validate the output of AI tools</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/responsible-use">Identify how to operate a responsible AI</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/responsible-use">Identify the potential harms of generative AI (bias, secure code, fairness, privacy, transparency)</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/responsible-use">Explain how to mitigate the occurrence of potential harms</a></li>
+          <li><a class="item" href="https://docs.github.com/en/copilot/responsible-use">Explain ethical AI</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Â© 2025 GitHub Copilot GH-300 Exam Study Guide | Based on official Microsoft Learning resources</p>
+    <p>Update links with canonical URLs from <code>docs.github.com/en/copilot</code></p>
+  </footer>
+</body>
+</html>
+
+
